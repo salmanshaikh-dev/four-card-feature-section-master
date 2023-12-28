@@ -1,0 +1,135 @@
+/* font-family: 'Poppins', sans-serif; */
+
+/* - Very Dark Blue: hsl(234, 12%, 34%)
+- Grayish Blue: hsl(229, 6%, 66%)
+- Very Light Gray: hsl(0, 0%, 98%) */
+
+:root {
+    --font-family: 'Poppins', sans-serif;
+    --font-weight-light: 200;
+    --font-weight-normal: 400;
+    --font-weight-bold: 600;
+    --font-size-400: 0.9275rem;
+    --font-size-500: 1.25rem;
+    --font-size-600: 1.625rem;
+    --font-size-heading: 2.3rem;
+
+
+    --clr-dark: hsl(234, 12%, 34%);
+    --clr-light: hsl(229, 6%, 66%);
+    --clr-white: hsl(0, 0%, 98%);
+
+    --clr-card-one: hsl(180, 58%, 55%);
+    --clr-card-two: hsl(359, 65%, 61%);
+    --clr-card-three: hsl(33, 96%, 64%);
+    --clr-card-four: hsl(211, 86%, 64%);
+
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: var(--font-family);
+    font-weight: var(--font-weight-normal);
+    line-height: 1.7;
+    color: var(--clr-light);
+}
+
+body {
+    margin: 0;
+    padding-block-end: 5rem;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.2;
+    color: var(--clr-dark);
+}
+
+.wrapper {
+    margin-inline: auto;
+    max-width: 1200px;
+    padding-inline: 2rem;
+}
+
+.wrapper--narrow {
+    max-width: 550px;
+}
+
+header {
+    text-align: center;
+    margin-block: 6rem;
+}
+
+header > p {
+    font-size: var(--font-size-500);
+}
+
+h1 {
+    font-size: var(--font-size-heading);
+    font-weight: var(--font-weight-light);
+}
+
+h1 span {
+    font-weight: var(--font-weight-bold);
+}
+.layout-box {
+    --gap: 2rem;
+
+    display: flex;
+    gap: var(--gap);
+}
+
+@media (max-width: 800px) {
+    .layout-box {
+        display: grid;
+        grid-template-columns: repeat(1fr);
+
+    }
+}
+
+.layout-box > * {
+    flex: 1;
+}
+
+.col {
+   display: grid;
+   gap: var(--gap);
+   align-content: center;
+}
+
+.card {
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow:  0 .5rem 1.5rem rgba(0, 50, 100, .15);
+    border-top: 5px solid;
+}
+
+.card__title {
+    font-size: var(--font-size-500);
+    font-weight: var(--font-weight-bold);
+}
+
+.card-img {
+    display: block;
+    margin-top: 2rem;
+    margin-left: auto;
+}
+/* these are called modifier classes */
+.border-one {
+    border-color: var(--clr-card-one);
+}
+.border-two {
+    border-color: var(--clr-card-two);
+}
+.border-three {
+    border-color: var(--clr-card-three);
+}
+.border-four {
+    border-color: var(--clr-card-four);
+}
